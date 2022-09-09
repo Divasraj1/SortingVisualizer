@@ -2,7 +2,7 @@ var inp_as = document.getElementById('a_size'),array_size = inp_as.value;
 var inp_gen = document.getElementById('a_generate');
 var inp_aspeed=document.getElementById("a_speed");
 
-var butts_algos = document.querySelector(".algos button");
+var butts_algos = document.querySelectorAll(".algos button");
 
 var div_sizes=[];
 var divs=[];
@@ -13,11 +13,11 @@ cont.style="flex-direction:row";
 //array generation and updation
 
 inp_gen.addEventListener("click",generate_array);
-inp_gen.addEventListener("input",update_array_size);
+inp_as.addEventListener("input",update_array_size);
 
 function generate_array(){
     cont.innerHTML="";
-
+    console.log("generate array called");
     for(var i=0;i<array_size;i++){
         div_sizes[i] = Math.floor(Math.random()*0.5*(inp_as.max - inp_as.min))+10;
         divs[i]=document.createElement("div");
@@ -29,6 +29,7 @@ function generate_array(){
 
 function update_array_size(){
     array_size=inp_as.value;
+    
     generate_array();
 }
 
@@ -38,6 +39,7 @@ window.onload = update_array_size();
 
 for(var i=0;i<butts_algos.length;i++){
     butts_algos[i].addEventListener("click",runalgo);
+ 
 }
 
 function disable_buttons(){
