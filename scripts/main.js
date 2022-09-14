@@ -78,9 +78,6 @@ function runalgo(){
             Quick();
             break;
 
-        case "Heap": 
-            Heap();
-        break;
     
         default:
             break;
