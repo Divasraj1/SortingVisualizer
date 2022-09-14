@@ -8,7 +8,7 @@
 }
 
 nav{
-    background-color: #3b3a3a;
+    background-color: black;
     color: white;
     display: -ms-grid;
     display: grid;
@@ -49,8 +49,8 @@ nav .header_right{
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 nav .header_right .nav-heading{
@@ -61,19 +61,22 @@ nav .header_right .nav-heading{
 nav .header_right .algos {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (16.66667%)[6];
-        grid-template-columns: repeat(6, 16.66667%);
+    -ms-grid-columns: (20%)[5];
+        grid-template-columns: repeat(5, 20%);
     place-content: center;
     padding: 2% 0%;
+    
 }
 
 nav .header_right .algos button{
-    background-color: transparent;
+    background-color: red;
     border: none;
     color: white;
     outline: none;
     padding: 5% 0%;
     font-size: x-large;
+    margin-right: 5px;
+    cursor: pointer;
 }
 nav .heading_right .algos button:hover{
     background-color: blue;
@@ -145,4 +148,10 @@ section #Info_Cont2 h3{
 }
 .hide{
     display: none;
+}
+.footer-text{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-bottom: 8px;
 }
